@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전상협 Sanghyep Jeon — Deal Portfolio</title>
+<meta name="description" content="전상협 지원자 포트폴리오 — Commercial Due Diligence 및 딜 관련 작업물 열람 페이지">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1B2A;
+  --navy:#123157;
+  --steel:#4A6FA5;
+  --paper:#F6F8FB;
+  --line:#D7DEE8;
+  --gold:#9A7B2D;
+  --white:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit}
+
+/* ---------- header ---------- */
+header{border-bottom:1px solid var(--line);background:var(--white)}
+.header-inner{max-width:1060px;margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:baseline}
+.header-inner .mark{font-family:'Noto Serif KR',serif;font-weight:700;font-size:15px;letter-spacing:.02em}
+.header-inner .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--steel);letter-spacing:.14em;text-transform:uppercase}
+
+/* ---------- hero ---------- */
+.hero{background:var(--navy);color:var(--white)}
+.hero-inner{max-width:1060px;margin:0 auto;padding:72px 24px 64px}
+.hero .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;color:#9FB6D4;text-transform:uppercase;margin-bottom:22px}
+.hero h1{font-family:'Noto Serif KR',serif;font-size:clamp(30px,4.6vw,46px);font-weight:700;line-height:1.28;max-width:760px}
+.hero h1 em{font-style:normal;color:#C9A94E}
+.hero .sub{margin-top:22px;max-width:640px;font-size:15.5px;color:#C7D4E4}
+.hero .creds{margin-top:36px;display:flex;flex-wrap:wrap;gap:0;border-top:1px solid rgba(255,255,255,.18)}
+.hero .cred{padding:16px 28px 0 0;margin-right:28px}
+.hero .cred b{display:block;font-family:'Noto Serif KR',serif;font-size:19px;font-weight:600;color:var(--white)}
+.hero .cred span{font-size:12px;color:#93A8C2;letter-spacing:.04em}
+
+/* ---------- section ---------- */
+main{max-width:1060px;margin:0 auto;padding:64px 24px 40px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:0}
+.section-head h2{font-family:'Noto Serif KR',serif;font-size:22px;font-weight:700}
+.section-head .count{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--steel)}
+
+/* ---------- dossier ---------- */
+.dossier{display:grid;grid-template-columns:200px 1fr 220px;gap:32px;padding:36px 0;border-bottom:1px solid var(--line);background:var(--paper)}
+.dossier .ref{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--steel);line-height:2}
+.dossier .ref .no{font-size:26px;color:var(--ink);font-weight:500;display:block;line-height:1.2;margin-bottom:6px}
+.dossier .stamp{display:inline-block;margin-top:14px;padding:4px 10px;border:1.5px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:.16em;font-weight:500;transform:rotate(-2deg)}
+.dossier h3{font-family:'Noto Serif KR',serif;font-size:20px;font-weight:700;line-height:1.4}
+.dossier .desc{margin-top:10px;font-size:14.5px;color:#3A4A5C;max-width:560px}
+.dossier .facts{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px 24px}
+.dossier .fact{font-size:12.5px}
+.dossier .fact b{font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--navy);display:block;font-size:14px}
+.dossier .fact span{color:#6A7A8C}
+.dossier .actions{display:flex;flex-direction:column;gap:10px;justify-content:center}
+.btn{display:block;text-align:center;text-decoration:none;font-size:13.5px;font-weight:500;padding:12px 16px;border:1px solid var(--navy);transition:all .15s ease}
+.btn.primary{background:var(--navy);color:var(--white)}
+.btn.primary:hover{background:#0C2440}
+.btn.ghost{color:var(--navy);background:var(--white)}
+.btn.ghost:hover{background:#EDF2F8}
+
+.dossier.upcoming{opacity:.55}
+.dossier.upcoming .stamp{border-color:#8A97A6;color:#8A97A6}
+
+/* ---------- note ---------- */
+.note{margin-top:44px;padding:22px 26px;background:var(--white);border-left:3px solid var(--gold);font-size:13.5px;color:#3A4A5C}
+.note b{color:var(--ink)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--white);border-top:1px solid var(--line);margin-top:72px}
+.contact-inner{max-width:1060px;margin:0 auto;padding:48px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.contact h2{font-family:'Noto Serif KR',serif;font-size:20px;font-weight:700}
+.contact p{font-size:13.5px;color:#5A6A7C;margin-top:6px}
+.contact .links{display:flex;gap:12px}
+
+footer{max-width:1060px;margin:0 auto;padding:20px 24px 40px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8A97A6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media(max-width:820px){
+  .dossier{grid-template-columns:1fr;gap:18px}
+  .dossier .actions{flex-direction:row}
+  .btn{flex:1}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="mark">전상협 · Sanghyep Jeon</div>
+    <div class="tag">Applicant Portfolio</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Operator-Built Deal Work</div>
+    <h1>창업부터 M&A 매각까지 직접 겪은 운영자의 시선으로 쓴 <em>실전 딜 문서</em></h1>
+    <p class="sub">F&B 사업을 창업·성장시켜 매각까지 완주한 경험과 컨설팅·투자 실무를 바탕으로 작성한 CDD, IM 등 딜 관련 작업물을 열람하실 수 있습니다. 모든 문서는 NDA에 따라 대상회사 식별 정보를 비공개 처리했습니다.</p>
+    <div class="creds">
+      <div class="cred"><b>350+ FTE</b><span>홍콩 F&B 그룹 창업 · 성장 · 매각 완주</span></div>
+      <div class="cred"><b>Sell-side M&A</b><span>SPA · Earn-out · 에스크로 직접 협상</span></div>
+      <div class="cred"><b>KR · HK</b><span>한국–홍콩 크로스보더 · EN 유창 · 광둥어</span></div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="section-head">
+    <h2>Document Index</h2>
+    <div class="count">01 published · updated 2026.07</div>
+  </div>
+
+  <article class="dossier">
+    <div class="ref">
+      <span class="no">01</span>
+      REF · CDD-2025-COFFEE<br>
+      14 / 82 pages · KR<br>
+      <span class="stamp">NDA REDACTED</span>
+    </div>
+    <div>
+      <h3>중저가 커피 프랜차이즈 Commercial Due Diligence</h3>
+      <p class="desc">영남권 기반 고성장 중저가 커피 프랜차이즈에 대한 상업 실사 보고서 발췌본. 시장 규모 추정, 경쟁 벤치마킹, 점포 침투 시나리오, Value Creation Plan, 규제 리스크 분석을 포함합니다.</p>
+      <div class="facts">
+        <div class="fact"><b>9.3조 원</b><span>'29F 중저가 시장 · CAGR 13.5%</span></div>
+        <div class="fact"><b>1,372개</b><span>'29 Base 점포 시나리오</span></div>
+        <div class="fact"><b>1,015억 원</b><span>'29 Base 매출 전망</span></div>
+      </div>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="assets/CDD_Coffee_Franchise_2025.pdf" target="_blank" rel="noopener">문서 열람</a>
+      <a class="btn ghost" href="assets/CDD_Coffee_Franchise_2025.pdf" download>PDF 다운로드</a>
+    </div>
+  </article>
+
+  <div class="note">
+    <b>열람 안내.</b> 본 페이지의 모든 문서는 채용 검토 목적의 선별 발췌본이며, 회사명·대표명·소재지 등 식별 정보는 NDA에 따라 비공개 처리되었습니다. 전체 버전 및 추가 작업물(IM, 재무모델 등)은 요청 시 별도 제공 가능합니다.
+  </div>
+</main>
+
+<section class="contact">
+  <div class="contact-inner">
+    <div>
+      <h2>Contact</h2>
+      <p>전체 포트폴리오 열람 또는 인터뷰 관련 문의를 환영합니다.</p>
+    </div>
+    <div class="links">
+      <a class="btn primary" href="mailto:CHANGE_ME@example.com">이메일 보내기</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/CHANGE_ME" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Sanghyep Jeon. Strictly Private &amp; Confidential.</div>
+  <div>회사명·대표명·주소 등 식별정보 NDA 비공개</div>
+</footer>
+
+</body>
+</html>
